@@ -1,0 +1,67 @@
+app:
+  allowWithoutContextResults: True
+
+openai:
+  key: 'YOUR_GEMINI_API_KEY'
+  model: 'gemini-2.5-flash'
+  active: True
+  temperature: 0
+
+financeGPT:
+  fileTypes:
+    - extensions:
+        - pdf
+      name: PDF
+    - extensions:
+      - csv
+      - xls
+      - xlsx
+      name: EXCEL
+
+sapAI:
+  active: False
+  configs:
+    apiUrl: ''
+    appName: ''
+    clientId: ''
+    clientSecret: ''
+    identityZone: ''
+    identityZoneId: ''
+    authUrl: ''
+    resourceGroup: ''
+    llmProxy: ''
+    temperature: 0
+    embeddings:
+      deploymentId: ''
+      model: 'text-embedding-ada-002'
+  openai:
+    model: 'gpt-4'
+
+files:
+  unstructuredLoader:
+    extensions:
+      - pptx
+      - html
+      - xml
+    active: False
+
+streamlit:
+  spinner:
+    messages:
+      get_allowed_file_types: False
+      get_allowed_query_types: False
+      get_assistant_avatar: False
+      get_avatar_for_role: False
+      get_csv_agent: 'Reading the uploaded file'
+      get_embeddings: False
+      get_file_text: 'Reading the uploaded file'
+      get_files_text: 'Reading the uploaded files'
+      get_llm: 'Connecting to LLM'
+      get_loaders: 'Loading the knowledge base files'
+      get_processed_data_from_loader: 'Creating the knowledge source'
+      get_processed_data_from_text: 'Creating the vector database'
+      get_prompt_result: 'Generating query response'
+      get_prompt_result_from_context: 'Generating query response'
+      get_user_avatar: False
+      is_success_response: 'Generating query response'
+      write_response: 'Writing response'
